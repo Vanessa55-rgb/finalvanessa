@@ -1,0 +1,225 @@
+/* Reset moderno */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+/* ================================
+Estilos globales del cuerpo
+================================ */
+body {
+font-family: 'Arial', sans-serif;;
+color: #333;
+background-color:  #fdfaf6;;
+}
+
+/* ================================
+Encabezado fijo con logo y proyecto
+================================ */
+header {
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #f4e1d2;
+position: fixed; /* Permanece fijo al hacer scroll */
+top: 0;
+width: 100%;
+z-index: 10; /* Se asegura de estar por encima del contenido */
+}
+
+/* Logo  */
+.logo img {
+max-width: 180px; /* Tamaño máximo del logo */
+}
+
+.nav-header{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.nav-header__link{
+font-size: 20px;
+text-decoration: none;
+color: black;
+padding-right: 20px;
+padding-left: 20px;
+line-height: 50px;
+font-family: var(--text-header);
+}
+
+.nav-header__link:hover{
+background-color: #e07a5f;
+color: antiquewhite;
+}
+
+.hero a:hover {
+background-color:#f4e1d2;
+text-decoration: none; /* Corrección aplicada */
+}
+
+/* ================================
+Sección hero o principal
+================================ */
+.hero {
+text-align: center;
+padding: 200px 20px 60px; /* Espaciado grande para destacar */
+background-color: #f4e1d2;
+}
+
+.hero h1 {
+font-size: 32px;;
+}
+
+.hero p {
+font-size: 32px;;
+margin: 10px 0 20px;
+}
+
+/* Botón principal */
+.btn {
+padding: 10px 20px;
+background-color: #e07a5f;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+display: inline-block;
+}
+
+/* ================================
+Seccion Proyectos
+================================ */
+
+/* Contenedor proyectos */
+.proyectos h2{
+font-size: 32px;;
+text-align: center;
+}
+
+.proyectos__cards {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+/* Cada proyecto */
+.proyectos-card {
+background-color: #fdfaf6;;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+width: 250px;
+padding: 20px;
+text-align: center;
+transition: transform 0.2s ease;
+}
+
+.proyectos-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Imagen/icono */
+.proyectos-card__image {
+width: 80px;
+height: 80px;
+margin-bottom: 15px;
+}
+
+/* Título proyecto */
+.proyectos-card__title {
+font-size: 1.1rem;
+margin-bottom: 12px;
+}
+
+/* Enlace */
+.proyectos-card a {
+text-decoration: none;
+color: white;
+background-color: #e07a5f;;
+padding: 10px 15px;
+border-radius: 5px;
+display: inline-block;
+font-weight: 600;
+transition: background-color 0.3s ease;
+}
+
+.proyectos-card {
+background-color: #e07a5f;;
+}
+
+/* Contenido textual de la tarjeta */
+.proyectos-card__content {
+padding: 15px;
+}
+
+/* Formulario */
+form {
+max-width: 300px;
+margin: 0 auto;
+}
+
+input, select {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+}
+
+/* ================================
+Pie de página
+================================ */
+footer {
+background-color: var(--secondary-color);
+padding: 40px 20px;
+text-align: center;
+}
+
+/* ================================
+Movil: de 320 px a 767 px
+================================ */
+@media (min-width: 320px) and (max-width: 767px) {
+.proyectos__cards {
+grid-template-columns: repeat(1fr); 
+}
+}
+
+/* ================================
+Tablet: de 750 px a 1023 px
+================================ */
+@media (min-width: 750px) and (max-width: 1023px) {
+.proyectos__cards {
+grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+}
+}
+
+/* ================================
+Escritorio: de 1024px en adelante
+================================ */
+@media (min-width: 1024px) {
+.proyectos__cards {
+grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+}
+
+.nav-header {
+gap: 30px; /* Más espacio entre enlaces en pantallas grandes */
+}
+}
+

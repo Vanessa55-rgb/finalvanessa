@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #fdfaf6;
+color: #333;
+line-height: 1.6;
+padding: 20px;
+}
+
+.nav-header{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.nav-header__link{
+font-size: 20px;
+text-decoration: none;
+color: black;
+padding-right: 20px;
+padding-left: 20px;
+line-height: 50px;
+font-family: var(--text-header);
+}
+
+.nav-header__link:hover{
+background-color: #e07a5f;
+color: antiquewhite;
+}
+
+.Event__Container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.Event__Software {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+}
+
+.Event__Up {
+padding-top: 1rem;
+font-size: 1.5rem;
+text-align: center;
+}
+
+.Event__Img {
+max-width: 100%;
+height: auto;
+padding-top: 20px;
+}
+
+hr {
+border: none;
+}
+
+.Event__Img {
+max-width: 100%;
+height: auto;
+padding-top: 20px;
+}
+
+.Event__Centrate {
+justify-content: center;
+}
+
+.Event__Separator {
+border: none;
+}
+
+.Event__AContainer {
+background-color: rgba(0, 0, 0, 0.288);
+padding: 1rem;
+}
+
+.Event__Content {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.Event__Sof {
+background-color: #1a1a1a;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+margin: 1rem;
+max-width: 100%;
+}
+
+.Event__Text {
+text-align: center;
+padding: 2rem;
+max-width: 700px;
+}
+
+.info-img {
+width: 100%;
+height: auto;
+border-radius: 20px;
+}
+
+.Event__Title {
+text-align: center;
+padding-top: 2rem;
+font-size: 1.8rem;
+}
+
+/* Pie de página */
+footer {
+text-align: center;
+color: #888;
+margin-top: 60px;
+font-size: 0.9rem;
+}
+    
+/* ================================
+Movil: de 320 px a 767 px
+================================ */
+@media (min-width: 320px) and (max-width: 767px) {
+.nav-header {
+grid-template-columns: repeat(1fr); 
+}
+}
+
+/* ================================
+Tablet: de 750 px a 1023 px
+================================ */
+@media (min-width: 750px) and (max-width: 1023px) {
+.Event__Software {
+grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+}
+}
+
+/* ================================
+Escritorio: de 1024px en adelante
+================================ */
+@media (min-width: 1024px) {
+.nav-header {
+grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+}
+}
